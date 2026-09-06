@@ -198,114 +198,6 @@
             margin-bottom: 0;
         }
     </style>
-
-<style id="enhanced-design-layer">
-/* ===== ENHANCED STUDY DESIGN — visual-only layer ===== */
-:root{
-  --study-ink:#18202a;
-  --study-muted:#5d6672;
-  --study-accent:#7b1830;
-  --study-accent-soft:#f7e9ed;
-  --study-highlight:#fff1a8;
-  --study-highlight-strong:#ffe36e;
-  --study-border:#e3e7ec;
-  --study-card:#ffffff;
-  --study-shadow:0 8px 24px rgba(20,28,38,.07);
-}
-html{scroll-behavior:smooth;}
-body{
-  color:var(--study-ink)!important;
-  background:#f6f7f9!important;
-  line-height:1.58!important;
-}
-body *{
-  box-sizing:border-box;
-}
-.header-card,.section-header,.topic-card,.card,.content-card{
-  border-radius:14px!important;
-}
-.header-card{
-  box-shadow:0 10px 30px rgba(60,20,30,.10)!important;
-}
-.section-header{
-  position:relative;
-  box-shadow:0 4px 14px rgba(20,28,38,.06)!important;
-}
-.section-header::after{
-  content:"";
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:3px;
-  background:linear-gradient(90deg,var(--study-accent),transparent);
-  border-radius:0 0 14px 14px;
-}
-.topic-card,.card,.content-card{
-  background:var(--study-card)!important;
-  border:1px solid var(--study-border)!important;
-  box-shadow:var(--study-shadow)!important;
-  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
-}
-.topic-card:hover,.card:hover,.content-card:hover{
-  transform:translateY(-1px);
-  box-shadow:0 12px 30px rgba(20,28,38,.10)!important;
-  border-color:#d4d9df!important;
-}
-/* High-yield emphasis: visual treatment only */
-mark,.highlight,.high-yield,.important,.imp,.key-point,.exam-point,.must-know{
-  background:linear-gradient(transparent 28%,var(--study-highlight) 28%,var(--study-highlight) 92%,transparent 92%)!important;
-  color:inherit!important;
-  padding:0 .12em!important;
-  border-radius:.18em!important;
-  font-weight:700!important;
-}
-strong,b{
-  font-weight:750!important;
-}
-/* Make common exam labels visually prominent without altering wording. */
-.badge,.tag,.label,.pill{
-  border-radius:999px!important;
-}
-/* Tables */
-table{
-  border-collapse:separate!important;
-  border-spacing:0!important;
-  overflow:hidden;
-  border-radius:10px!important;
-  box-shadow:0 3px 14px rgba(20,28,38,.05)!important;
-}
-th{
-  font-weight:750!important;
-}
-td,th{
-  border-color:var(--study-border)!important;
-}
-/* Lists are easier to scan */
-li{margin-bottom:.22em;}
-/* Details/expandable sections */
-details{
-  border:1px solid var(--study-border)!important;
-  border-radius:12px!important;
-  background:#fff!important;
-  margin:10px 0!important;
-  box-shadow:0 3px 12px rgba(20,28,38,.04)!important;
-}
-details>summary{
-  cursor:pointer;
-  font-weight:750;
-  padding:11px 14px!important;
-}
-details[open]>summary{
-  background:var(--study-accent-soft)!important;
-  color:var(--study-accent)!important;
-  border-radius:12px 12px 0 0!important;
-}
-/* Prevent decorative changes from affecting printed/exported content */
-@media print{
-  body{background:#fff!important;}
-  .topic-card,.card,.content-card{box-shadow:none!important;}
-}
-</style>
-
 </head>
 <body>
 
@@ -2199,19 +2091,6 @@ details[open]>summary{
     </div>
 
 </div>
-
-
-<script id="study-visual-enhancement">
-(function(){
-  const selectors = [
-    '.high-yield','.important','.imp','.key-point','.exam-point','.must-know',
-    '[data-high-yield]','mark'
-  ];
-  document.querySelectorAll(selectors.join(',')).forEach(el=>{
-    el.classList.add('study-highlighted');
-  });
-})();
-</script>
 
 </body>
 </html>
